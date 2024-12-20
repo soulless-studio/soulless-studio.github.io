@@ -3,7 +3,7 @@ email: say-hi@soulless.studio
 description: >-
   Game development studio creating amazing experiences
 baseurl: ""
-url: <%= ENV['SITE_URL'] || 'https://soulless-studio.github.io' %>
+url: 'https://soulless-studio.github.io'
 theme: minima
 
 header_pages:
