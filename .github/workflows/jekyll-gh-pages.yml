@@ -34,9 +34,9 @@ jobs:
       - name: Set URL in config
         run: |
           if [ "${{ github.ref }}" = "refs/heads/production" ]; then
-            sed -i "s|url:.*|url: https://${{ secrets.PRODUCTION_DOMAIN }}|g" _config.yml
+            sed -i "s|baseurl:.*|baseurl: https://${{ secrets.PRODUCTION_DOMAIN }}|g" _config.yml
           else
-            sed -i "s|url:.*|url: https://${{ secrets.DEVELOPMENT_DOMAIN }}|g" _config.yml
+            sed -i "s|baseurl:.*|baseurl: https://${{ secrets.DEVELOPMENT_DOMAIN }}|g" _config.yml
           fi
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
