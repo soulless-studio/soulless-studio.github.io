@@ -6,19 +6,20 @@
 }
 
 .game-card {
-    background: transparent;
+    background: #000000;
     perspective: 1000px;
     height: auto;
     border-radius: 1rem;
     overflow: hidden;
     margin: 0.5rem;
     padding: 1rem;
-    background-color: #000000;
     transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .game-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
 .game-card-image {

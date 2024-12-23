@@ -4,22 +4,22 @@
 
 // Monochrome Color Variables
 $primary: #000000;
-$secondary: #1a1a1a;
-$accent: #333333;
+$secondary: #2a2a2a;
+$accent: #404040;
 $light-grey: #f5f5f5;
 $mid-grey: #808080;
 $dark-grey: #404040;
 $text-dark: #1a1a1a;
 $text-light: #ffffff;
-$background: #1a1a1a;
+$background: #2a2a2a;
 
 // Override Bulma variables
 $body-background-color: $background;
-$text: $text-light;
-$text-strong: $text-light;
-$title-color: $text-light;
-$subtitle-color: $light-grey;
-$card-background-color: $secondary;
+$text: $light-grey;
+$text-strong: $mid-grey;
+$title-color: $mid-grey;
+$subtitle-color: $mid-grey;
+$card-background-color: $primary;
 $card-color: $text-light;
 $card-header-color: $text-light;
 $navbar-background-color: $primary;
@@ -208,7 +208,7 @@ hr {
     color: $text-light;
     
     h1, h2, h3, h4, h5, h6 {
-        color: $text-light;
+        color: $mid-grey;
     }
     
     p {
@@ -221,6 +221,10 @@ hr {
         &:hover {
             color: $text-light;
         }
+    }
+    
+    strong {
+        color: $mid-grey !important;
     }
 }
 
@@ -242,6 +246,75 @@ hr {
             background-color: $mid-grey;
             color: $text-light;
         }
+    }
+}
+
+// Post Page Styles
+#post {
+    .subtitle {
+        &.is-6, &.is-uppercase {
+            color: $mid-grey !important;
+            
+            b, a, u {
+                color: $mid-grey !important;
+            }
+            
+            i.fas {
+                color: $mid-grey !important;
+            }
+            
+            .tag {
+                background-color: transparent !important;
+                color: $mid-grey !important;
+            }
+        }
+    }
+    
+    .has-text-link {
+        color: $mid-grey !important;
+    }
+}
+
+// Blog and Page Headings
+.post-title, .page-title, .post-link, h1, h2, h3, h4, h5, h6 {
+    color: $mid-grey !important;
+}
+
+.post-meta {
+    color: $mid-grey;
+    
+    i, .fa-solid, .fa-regular {
+        color: $mid-grey;
+    }
+    
+    span, time, .read-time {
+        color: $mid-grey;
+    }
+}
+
+.post-tags {
+    i {
+        color: $mid-grey;
+    }
+    
+    a {
+        color: $mid-grey;
+        
+        &:hover {
+            color: $light-grey;
+        }
+    }
+}
+
+.post-date, .post-author {
+    color: $mid-grey;
+}
+
+.post-content {
+    color: $light-grey;
+    
+    p, li {
+        color: $light-grey;
     }
 }
 
@@ -299,13 +372,17 @@ hr {
 
 // Footer Logo
 .footer-logo {
-    width: 64px;
+    width: 96px;
     height: 64px;
+    border-radius: 0 !important;
+    background: none !important;
+    display: block !important;
     
     img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        border-radius: 0 !important;
         transition: opacity 0.3s ease;
         
         &:hover {
@@ -330,7 +407,52 @@ hr {
     
     h2 {
         font-size: 1.5rem;
-        color: $text-light;
+        color: $mid-grey;
         text-align: center;
+    }
+}
+
+// Text Styles
+strong, b {
+    color: $mid-grey !important;
+}
+
+// About Page Styles
+.box.has-background-black {
+    border-radius: 1rem;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+    
+    .title {
+        margin-bottom: 1.5rem;
+        color: $mid-grey;
+    }
+    
+    .content {
+        color: $light-grey;
+        
+        strong {
+            color: $mid-grey;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            
+            li {
+                margin-bottom: 1rem;
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,58 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% include head.html %}
+</head>
+
+<body>
+  {% include navbar.html %}
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <!-- Introduction -->
+          <div class="content has-text-centered mb-6">
+            <h1 class="title is-2">{{ page.title }}</h1>
+            {% assign sections = content | split: '## ' %}
+            <p class="subtitle is-5">{{ sections.first }}</p>
+          </div>
+
+          <!-- Main Content Grid -->
+          <div class="columns is-multiline">
+            {% assign sections = content | split: '## ' %}
+            {% for section in sections offset:1 %}
+              {% assign section_title = section | split: '
+' | first %}
+              {% assign section_content = section | split: '
+' | shift | join: '
+' %}
+              
+              {% if section_title contains 'Who We Are' or section_title contains 'Our Mission' or section_title contains 'Our Vision' or section_title contains 'Our Values' %}
+              <div class="column is-6">
+              {% else %}
+              <div class="column is-12">
+              {% endif %}
+                <div class="box has-background-black{% if section_title contains 'Join Us' %} has-text-centered{% endif %}">
+                  <h2 class="title is-4 has-text-centered">{{ section_title }}</h2>
+                  <div class="content">
+                    {{ section_content | markdownify }}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include footer.html %}
+</body>
+
+</html>
