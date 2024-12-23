@@ -1,0 +1,49 @@
+<style>
+.game-circle {
+    width: 320px !important;
+    height: 320px !important;
+    background-color: #000000 !important;
+    border-radius: 50% !important;
+    margin: 20px auto !important;
+    display: block !important;
+    overflow: hidden !important;
+    position: relative !important;
+    border: 2px solid #808080 !important;
+}
+
+.game-circle::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 100px !important;
+    height: 100px !important;
+    background-color: #2a2a2a !important;
+    border-radius: 50% !important;
+    z-index: 1 !important;
+    border: 2px solid #808080 !important;
+}
+
+.game-circle img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+</style>
+
+<div class="columns is-centered is-multiline is-mobile">
+  {% for project in site.data.projects %}
+    {% if project.type == 'game' %}
+      <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile has-text-centered">
+        <div class="game-circle">
+          {% if project.image %}
+            <img src="{{site.url}}{{site.baseurl}}{{project.image}}" alt="{{project.name}}" />
+          {% else %}
+            <img src="{{site.url}}{{site.baseurl}}/assets/images/game-placeholder.png" alt="{{project.name}}" />
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

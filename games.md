@@ -1,7 +1,5 @@
 ---
-layout: page
+layout: game
 title: Our Games
 permalink: /games/
 ---
-
-{% include game-card.html %}
