@@ -456,3 +456,70 @@ strong, b {
         }
     }
 }
+
+// Contact Page Social Links
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+    
+    .social-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $mid-grey;
+        transition: all 0.3s ease;
+        
+        i {
+            margin-bottom: 0.5rem;
+        }
+        
+        span {
+            font-size: 0.9rem;
+        }
+        
+        &:hover {
+            color: $light-grey;
+            transform: translateY(-3px);
+        }
+    }
+}
+
+.email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $mid-grey;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    
+    &:hover {
+        color: $light-grey;
+    }
+    
+    i {
+        font-size: 1.1em;
+    }
+}
+
+// Email Display
+.email-display {
+    color: $mid-grey;
+    font-size: 1.2rem;
+    
+    .fa-envelope {
+        margin-right: 0.5rem;
+    }
+    
+    i {
+        color: $mid-grey;
+        font-style: italic;
+        font-size: 1rem;
+        
+        &.fas {
+            font-style: normal;
+        }
+    }
+}

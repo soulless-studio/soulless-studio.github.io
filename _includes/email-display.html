@@ -1,0 +1,7 @@
+{% assign email_parts = site.email | split: '@' %}
+{% assign username = email_parts[0] %}
+{% assign domain_parts = email_parts[1] | split: '.' %}
+<span class="email-display">
+    <i class="fas fa-envelope"></i>
+    {{ username }} <i>at</i> {{ domain_parts[0] }} <i>dot</i> {{ domain_parts[1] }}
+</span>
