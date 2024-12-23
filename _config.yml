@@ -2,12 +2,32 @@ title: Soulless Studio
 email: say-hi@soulless.studio
 description: >-
   Game development studio creating amazing experiences
-url: ""
-baseurl: 'https://soulless-studio.github.io'
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://soulless-studio.github.io" # the base hostname & protocol for GitHub project pages
+
 theme: minima
 
 header_pages:
   - index.md
   - games.md
+  - blog.md
   - about.md
   - contact.md
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Custom settings
+show_excerpts: true
+
+# Sass settings
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Add custom CSS
+extra_css:
+  - /assets/css/custom.css

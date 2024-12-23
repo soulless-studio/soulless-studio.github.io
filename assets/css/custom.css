@@ -1,0 +1,187 @@
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.game-card {
+    background: transparent;
+    perspective: 1000px;
+    height: 300px;
+}
+
+.game-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.game-card.flipped .game-card-inner {
+    transform: rotateY(180deg);
+}
+
+.game-card-front, .game-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.game-card-front {
+    background: linear-gradient(145deg, #2a2a2a, #3a3a3a);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.game-cover-container {
+    position: relative;
+    width: 256px;
+    height: 256px;
+    margin: 0 auto;
+}
+
+.game-cover {
+    width: 256px;
+    height: 256px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Create DVD outer edge */
+    mask: 
+        radial-gradient(circle at center,
+            transparent 15%,           /* Center hole */
+            #000 15.5%,               /* Start of disc */
+            #000 47%,                 /* Main disc area */
+            transparent 47.5%          /* Outer edge */
+        );
+    -webkit-mask: 
+        radial-gradient(circle at center,
+            transparent 15%,
+            #000 15.5%,
+            #000 47%,
+            transparent 47.5%
+        );
+}
+
+.dvd-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: 
+        radial-gradient(circle at center,
+            transparent 15%,                               /* Center hole */
+            rgba(255,255,255,0.1) 15.5%,                  /* Inner ring highlight */
+            rgba(255,255,255,0.05) 20%,                   /* Subtle inner gradient */
+            rgba(255,255,255,0.02) 40%,                   /* Main disc surface */
+            rgba(255,255,255,0.1) 47%,                    /* Outer ring highlight */
+            transparent 47.5%                             /* Outer edge */
+        );
+    pointer-events: none;
+}
+
+.game-card-back {
+    background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+    color: white;
+    transform: rotateY(180deg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-info {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game-title {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.game-description {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.platform-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.platform-icon i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.centered-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    text-align: center;
+}
+
+.centered-logo img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.blog-list {
+    margin: 2rem 0;
+}
+
+.blog-post {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.blog-post:last-child {
+    border-bottom: none;
+}
+
+.blog-title {
+    color: #333;
+    text-decoration: none;
+}
+
+.blog-title:hover {
+    color: #0366d6;
+}
+
+.blog-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
