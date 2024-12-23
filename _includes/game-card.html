@@ -13,14 +13,13 @@
 
   {% for project in site.data.projects %}
     {% if project.type == 'game' %}
-      <div class="column has-text-centered is-paddingless is-marginless is-one-third-widescreen is-one-third-desktop is-one-fifth-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch"
-        id="game-card">
+      <div class="column has-text-centered is-paddingless is-marginless is-one-third-widescreen is-one-third-desktop is-one-fifth-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
         <div class="game-card">
           <div class="game-card-image">
             {% if project.image %}
-              <img class="is-rounded" src="{{site.url}}{{site.baseurl}}/assets/images/{{project.image}}" alt="{{project.name}}" />
+              <img src="{{site.url}}{{site.baseurl}}{{project.image}}" alt="{{project.name}}" />
             {% else %}
-              <img class="is-rounded" src="{{site.url}}{{site.baseurl}}/assets/images/default-game.png" alt="{{project.name}}" />
+              <img src="{{site.url}}{{site.baseurl}}/assets/images/game-placeholder.png" alt="{{project.name}}" />
             {% endif %}
           </div>
           <div class="game-card-content">

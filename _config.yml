@@ -26,8 +26,8 @@ google-analytics:
 disqus-shortname: 
 
 author-name: Soulless Studio
-author-image: /assets/images/logo.png
-author-about: We are an independent game development studio dedicated to creating immersive and thought-provoking gaming experiences. Our first title is currently in development, combining innovative gameplay mechanics with atmospheric storytelling. Follow our journey as we craft our debut game with meticulous attention to detail and a passion for pushing creative boundaries.
+author-image: /assets/images/logo-white.png
+author-about: We pour everything in, proving that ‘soulless’ is anything but.
 author-url: https://soulless.studio
 
 permalink: "news/:categories/:year/:month/:day/:title/"

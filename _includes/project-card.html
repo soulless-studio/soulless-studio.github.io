@@ -13,27 +13,31 @@
 
   {% for project in site.data.projects %}
     {% if project.type != 'game' %}
-      <div class="column has-text-centered is-paddingless is-marginless is-one-third-widescreen is-one-third-desktop is-one-fifth-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch"
-        id="project-card">
+      <div class="column has-text-centered is-paddingless is-marginless is-one-third-widescreen is-one-third-desktop is-one-fifth-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
         <a href="{{project.link}}">
-        <div class="has-background-black card">
-          <figure class="image is-3by1" style="background-image: url({{project.image}});">
-          </figure>
-          <div class="card-content">
-            <h1 class="title has-text-white is-size-4">{{ project.name }}</h1>
-            <p class="has-text-white has-text-weight-light content">{{ project.description | truncate: 80}}</p>
-            {% if project.platforms %}
-            <div class="platform-icons has-text-white mt-4">
+        <div class="game-card">
+          <div class="game-card-image">
+            {% if project.image %}
+              <img src="{{site.url}}{{site.baseurl}}{{project.image}}" alt="{{project.name}}" />
+            {% else %}
+              <img src="{{site.url}}{{site.baseurl}}/assets/images/game-placeholder.png" alt="{{project.name}}" />
+            {% endif %}
+          </div>
+          <div class="game-card-content">
+            <div class="game-name">{{project.name}}</div>
+            <div class="game-platforms">
+              {% if project.platforms %}
               {% assign platform_data = platform_info | fromjson %}
               {% assign sorted_platforms = project.platforms | sort %}
               {% for platform_id in sorted_platforms %}
                 {% assign platform = platform_data[platform_id] %}
-                <span class="icon is-medium" title="{{ platform.name }}">
+                <span class="platform-icon" title="{{ platform.name }}">
                   <i class="{{ platform.icon }}"></i>
                 </span>
               {% endfor %}
+              {% endif %}
             </div>
-            {% endif %}
+            <div class="game-description">{{project.description | truncate: 80}}</div>
           </div>
         </div>
         </a>

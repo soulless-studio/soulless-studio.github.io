@@ -1,5 +1,5 @@
 - name: Our First Title
-  image: /assets/images/game-placeholder.jpg
+  image: /assets/images/game-placeholder.png
   link: /games#first-title
   description: Our debut title, currently in development. A unique gaming experience that will challenge conventions and push creative boundaries. Follow our journey as we craft this exciting new game.
   type: game
@@ -12,7 +12,7 @@
 
 - name: Second Project
   link: /games#second-project
-  image: https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg
+  image: /assets/images/game-placeholder.png
   description: Our second project, currently in development. A unique gaming experience that will challenge conventions and push creative boundaries. Follow our journey as we craft this exciting new game.
   type: app
   platforms:
@@ -21,7 +21,7 @@
 
 - name: Third Project
   link: /games#third-project
-  image: https://cdn.pixabay.com/photo/2016/06/25/12/55/art-1478831_960_720.jpg
+  image: /assets/images/game-placeholder.png
   description: Our third project, currently in development. A unique gaming experience that will challenge conventions and push creative boundaries. Follow our journey as we craft this exciting new game.
   type: game
   platforms:
@@ -29,7 +29,7 @@
 
 - name: Fourth Project
   link: /games#fourth-project
-  image: https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849822_960_720.jpg
+  image: /assets/images/game-placeholder.png
   description: Our fourth project, currently in development. A unique gaming experience that will challenge conventions and push creative boundaries. Follow our journey as we craft this exciting new game.
   type: game
   platforms:
@@ -38,7 +38,7 @@
 
 - name: Fifth Project
   link: /games#fifth-project
-  image: https://cdn.pixabay.com/photo/2016/12/02/02/10/idea-1876659_960_720.jpg
+  image: /assets/images/game-placeholder.png
   description: Our fifth project, currently in development. A unique gaming experience that will challenge conventions and push creative boundaries. Follow our journey as we craft this exciting new game.
   type: game
   platforms:
