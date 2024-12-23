@@ -1,9 +1,36 @@
 title: Soulless Studio
 email: say-hi@soulless.studio
 description: >-
-  Game development studio creating amazing experiences
+  An ambitious indie game studio crafting our debut title with passion and precision. We're a small team with big dreams, focusing on creating unique gaming experiences that challenge conventions and captivate players.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://soulless-studio.github.io" # the base hostname & protocol for GitHub project pages
+
+site-image: /assets/images/meta.jpg
+site-keywords: Indie Game Studio, Game Development, Indie Games, Gaming
+favicon-url: /assets/images/favicon.ico
+heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+
+facebook_username: 
+twitter_username: 
+instagram_username: soulless.studio
+linkedin_username: 
+github_username: soulless-studio
+youtube_channel_id: 
+reddit_username: soulless_studio
+behance_username: 
+dribbble_username: 
+spotify_username: 
+tiktok_username: soulless.studio
+
+google-analytics: 
+disqus-shortname: 
+
+author-name: Soulless Studio
+author-image: /assets/images/logo.png
+author-about: We are an independent game development studio dedicated to creating immersive and thought-provoking gaming experiences. Our first title is currently in development, combining innovative gameplay mechanics with atmospheric storytelling. Follow our journey as we craft our debut game with meticulous attention to detail and a passion for pushing creative boundaries.
+author-url: https://soulless.studio
+
+permalink: "news/:categories/:year/:month/:day/:title/"
 
 theme: minima
 

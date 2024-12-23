@@ -1,7 +1,9 @@
 <head>
     {% include meta.html %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{site.title}}</title>
-    <link rel="stylesheet" href="{% if site.baseurl %}{{site.baseurl}}{% else %}{% endif %}/assets/css/style.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://kit.fontawesome.com/6a97161b76.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="{% if site.favicon-url %}{{site.favicon-url}}{% else %}{{ 'assets/images/logo.png' | absolute_url }}{% endif %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{site.baseurl}}{{site.favicon-url}}" type="image/x-icon">
 </head>

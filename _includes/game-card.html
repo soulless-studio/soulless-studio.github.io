@@ -1,0 +1,45 @@
+<div class="columns is-centered is-multiline is-mobile">
+  {% assign platform_info = 
+  '{ "windows": { "name": "Windows", "icon": "fa-brands fa-windows" },
+     "macos": { "name": "macOS", "icon": "fa-brands fa-apple" },
+     "linux": { "name": "Linux", "icon": "fa-brands fa-linux" },
+     "ps5": { "name": "PlayStation 5", "icon": "fa-brands fa-playstation" },
+     "xbox": { "name": "Xbox Series X", "icon": "fa-brands fa-xbox" },
+     "switch": { "name": "Nintendo Switch", "icon": "fa-solid fa-gamepad" },
+     "web": { "name": "Web", "icon": "fa-solid fa-globe" },
+     "ios": { "name": "iOS", "icon": "fa-brands fa-app-store-ios" },
+     "android": { "name": "Android", "icon": "fa-brands fa-google-play" }
+   }' | jsonify %}
+
+  {% for project in site.data.projects %}
+    {% if project.type == 'game' %}
+      <div class="column has-text-centered is-paddingless is-marginless is-one-third-widescreen is-one-third-desktop is-one-fifth-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch"
+        id="game-card">
+        <div class="game-card">
+          <div class="game-card-image">
+            {% if project.image %}
+              <img class="is-rounded" src="{{site.url}}{{site.baseurl}}/assets/images/{{project.image}}" alt="{{project.name}}" />
+            {% else %}
+              <img class="is-rounded" src="{{site.url}}{{site.baseurl}}/assets/images/default-game.png" alt="{{project.name}}" />
+            {% endif %}
+          </div>
+          <div class="game-card-content">
+            <div class="game-name">{{project.name}}</div>
+            <div class="game-platforms">
+              {% assign platforms = project.platforms | split: ',' %}
+              {% for platform in platforms %}
+                {% assign platform_data = platform_info | fromjson | at: platform %}
+                {% if platform_data %}
+                  <span class="platform-icon" title="{{platform_data.name}}">
+                    <i class="{{platform_data.icon}}"></i>
+                  </span>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="game-description">{{project.description}}</div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

@@ -2,15 +2,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css');
 
+// Monochrome Color Variables
+$primary: #000000;
+$secondary: #1a1a1a;
+$accent: #333333;
+$light-grey: #f5f5f5;
+$mid-grey: #808080;
+$dark-grey: #404040;
+$text-dark: #1a1a1a;
+$text-light: #ffffff;
+$background: #1a1a1a;
+
+// Override Bulma variables
+$body-background-color: $background;
+$text: $text-light;
+$text-strong: $text-light;
+$title-color: $text-light;
+$subtitle-color: $light-grey;
+$card-background-color: $secondary;
+$card-color: $text-light;
+$card-header-color: $text-light;
+$navbar-background-color: $primary;
+$navbar-item-color: $text-light;
+$navbar-item-hover-color: $text-light;
+$navbar-item-hover-background-color: $secondary;
+$footer-background-color: $primary;
+$footer-color: $text-light;
 
 html,
 body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth !important;
     transition: all 0.25s ease;
+    background-color: $background;
+    color: $text-light;
 }
-
-
 
 /* width */
 ::-webkit-scrollbar {
@@ -19,34 +45,69 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: white !important;
+    background: $secondary !important;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #363636 !important;
+    background: $dark-grey !important;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: black !important;
+    background: $accent !important;
 }
 
 ::placeholder {
     font-family: 'Poppins', sans-serif;
+    color: $mid-grey;
 }
 
+// Navigation
 #navbar {
+    background-color: $primary;
+    
     .navbar-burger {
+        color: $text-light;
         span:nth-child(2) {
             left: calc(50%);
             width: 8px;
+        }
+    }
+    
+    .navbar-item {
+        color: $text-light;
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+    
+    .navbar-menu {
+        background-color: $primary;
+    }
+
+    .navbar-logo {
+        img {
+            height: 28px; // Standard navbar height
+            max-height: none !important; // Override Bulma's default
+            width: auto;
+            transition: opacity 0.3s ease;
+            
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        
+        &:hover {
+            background-color: transparent !important;
         }
     }
 }
 
 .is-active {
     font-weight: bold;
+    color: $text-light !important;
+    background-color: $secondary !important;
 }
 
 .columns {
@@ -70,5 +131,207 @@ hr {
         .title {
             text-decoration: underline;
         }
+    }
+}
+
+.card {
+    background-color: $secondary;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    
+    &:hover {
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+    }
+    
+    .card-content {
+        background-color: $secondary;
+        .title {
+            color: $text-light;
+        }
+        
+        .subtitle {
+            color: $light-grey;
+        }
+    }
+}
+
+.hero {
+    background-color: $background;
+    
+    &.is-primary {
+        background-color: $primary;
+        color: $text-light;
+        
+        .title, .subtitle {
+            color: $text-light;
+        }
+    }
+}
+
+.blog-card {
+    background-color: $secondary;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.platform-icons {
+    margin-top: 1rem;
+    
+    .icon {
+        margin: 0 0.5rem;
+        color: $text-light;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.footer {
+    background-color: $primary;
+    color: $text-light;
+    
+    a {
+        color: $light-grey;
+        
+        &:hover {
+            color: $text-light;
+        }
+    }
+}
+
+.content {
+    color: $text-light;
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: $text-light;
+    }
+    
+    p {
+        color: $light-grey;
+    }
+    
+    a {
+        color: $light-grey;
+        
+        &:hover {
+            color: $text-light;
+        }
+    }
+}
+
+.button {
+    &.is-primary {
+        background-color: $primary;
+        color: $text-light;
+        
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+    
+    &.is-light {
+        background-color: $light-grey;
+        color: $text-dark;
+        
+        &:hover {
+            background-color: $mid-grey;
+            color: $text-light;
+        }
+    }
+}
+
+// Game Card
+.game-card {
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: $primary;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+    
+    .game-card-image {
+        margin-bottom: 1rem;
+        
+        img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 2px solid $text-light;
+        }
+    }
+    
+    .game-card-content {
+        .game-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: $text-light;
+            margin-bottom: 0.5rem;
+        }
+        
+        .game-platforms {
+            margin-bottom: 0.5rem;
+            
+            .platform-icon {
+                margin: 0 0.25rem;
+                color: $text-light;
+                
+                i {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        
+        .game-description {
+            color: $text-light;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    }
+}
+
+// Footer Logo
+.footer-logo {
+    width: 64px;
+    height: 64px;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: opacity 0.3s ease;
+        
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+// Centered Logo
+.centered-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    img {
+        width: 33.33%; // One third of the container width
+        height: auto;
+        max-width: 400px; // Maximum size limit
+        margin-bottom: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        color: $text-light;
+        text-align: center;
     }
 }
