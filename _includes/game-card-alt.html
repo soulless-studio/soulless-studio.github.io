@@ -1,17 +1,54 @@
 <style>
-.game-circle {
+.game-circle-wrapper {
+    perspective: 1000px !important;
     width: 320px !important;
     height: 320px !important;
-    background-color: #000000 !important;
-    border-radius: 50% !important;
     margin: 20px auto !important;
-    display: block !important;
-    overflow: hidden !important;
-    position: relative !important;
-    border: 2px solid #808080 !important;
+    cursor: pointer !important;
 }
 
-.game-circle::after {
+.game-circle {
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+    transform-style: preserve-3d !important;
+    transition: transform 0.8s !important;
+}
+
+.game-circle.is-flipped {
+    transform: rotateY(180deg) !important;
+}
+
+.game-circle-front,
+.game-circle-back {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    backface-visibility: hidden !important;
+    background-color: #000000 !important;
+    border-radius: 50% !important;
+    border: 2px solid #808080 !important;
+    overflow: hidden !important;
+}
+
+.game-circle-back {
+    transform: rotateY(180deg) !important;
+    background: conic-gradient(
+        #00BFFF,
+        #4169E1,
+        #32CD32,
+        #98FB98,
+        #FFD700,
+        #00CED1,
+        #1E90FF,
+        #90EE90,
+        #00BFFF
+    ) !important;
+    opacity: 0.25 !important;
+}
+
+.game-circle-front::after,
+.game-circle-back::after {
     content: '' !important;
     position: absolute !important;
     top: 50% !important;
@@ -25,6 +62,10 @@
     border: 2px solid #808080 !important;
 }
 
+.game-circle-back::after {
+    background-color: #2a2a2a !important;
+}
+
 .game-circle img {
     width: 100% !important;
     height: 100% !important;
@@ -36,14 +77,32 @@
   {% for project in site.data.projects %}
     {% if project.type == 'game' %}
       <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile has-text-centered">
-        <div class="game-circle">
-          {% if project.image %}
-            <img src="{{site.url}}{{site.baseurl}}{{project.image}}" alt="{{project.name}}" />
-          {% else %}
-            <img src="{{site.url}}{{site.baseurl}}/assets/images/game-placeholder.png" alt="{{project.name}}" />
-          {% endif %}
+        <div class="game-circle-wrapper">
+          <div class="game-circle">
+            <div class="game-circle-front">
+              {% if project.image %}
+                <img src="{{site.url}}{{site.baseurl}}{{project.image}}" alt="{{project.name}}" />
+              {% else %}
+                <img src="{{site.url}}{{site.baseurl}}/assets/images/game-placeholder.png" alt="{{project.name}}" />
+              {% endif %}
+            </div>
+            <div class="game-circle-back"></div>
+          </div>
         </div>
       </div>
     {% endif %}
   {% endfor %}
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const circles = document.querySelectorAll('.game-circle-wrapper');
+    
+    circles.forEach(circle => {
+        circle.addEventListener('click', function() {
+            const gameCircle = this.querySelector('.game-circle');
+            gameCircle.classList.toggle('is-flipped');
+        });
+    });
+});
+</script>
