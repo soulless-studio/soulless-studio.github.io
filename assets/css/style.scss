@@ -356,3 +356,22 @@ a.navbar-item.is-active {
         }
     }
 }
+
+// Code block styling
+pre {
+    background-color: #2f2f2f !important;
+    border-radius: 4px !important;
+    padding: 1.25em 1.5em !important;
+    margin-bottom: 1.5rem !important;
+}
+
+code {
+    background-color: #2f2f2f !important;
+    color: #ffffff !important;
+    padding: 0.2em 0.4em !important;
+    border-radius: 3px !important;
+}
+
+pre code {
+    padding: 0 !important;
+}

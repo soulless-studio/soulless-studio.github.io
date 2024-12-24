@@ -16,27 +16,11 @@ tags:
 url: /project/soulless
 platforms:
   - name: web
-    url: https://soulless.itch.io/soullessgame
+    url: # https://soulless.studio/soullessgame
   - name: itchio
-    url: https://soulless.itch.io/soullessgame
+    url: # https://soulless.itch.io/soullessgame
   - name: steam
-    url: https://store.steampowered.com/app/000000/soullessgame/
-  - name: ios
-    url: https://apps.apple.com/us/app/soullessgame/id0000000000
-  - name: android
-    url: https://play.google.com/store/apps/details?id=studio.soulless.soullessgame
-  - name: windows
-    url: https://microsoft.com/store/apps/soullessgame
-  - name: macos
-    url: https://apple.com/store/apps/soullessgame
-  - name: linux
-    url: https://ubuntu.com/store/apps/soullessgame
-  - name: ps5
-    url: https://store.playstation.com/app/soullessgame
-  - name: xbox
-    url: https://www.xbox.com/games/soullessgame
-  - name: switch
-    url: https://www.nintendo.com/games/soullessgame
+    url: # https://store.steampowered.com/app/000000/soullessgame/
 ---
 
 Soulless is our ambitious debut title, currently in the prototyping phase. We're pouring our hearts and souls into crafting a unique gaming experience that we can't wait to share with you!
