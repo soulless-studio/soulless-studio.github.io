@@ -1,7 +1,5 @@
 ---
-layout: page
-title: Games
+layout: games
+title: Our Games
 permalink: /games/
 ---
-
-Our games coming soon...

@@ -1,0 +1,525 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css');
+
+// Monochrome Color Variables
+$primary: #000000;
+$secondary: #2a2a2a;
+$accent: #404040;
+$light-grey: #f5f5f5;
+$mid-grey: #808080;
+$dark-grey: #404040;
+$text-dark: #1a1a1a;
+$text-light: #ffffff;
+$background: #2a2a2a;
+
+// Override Bulma variables
+$body-background-color: $background;
+$text: $light-grey;
+$text-strong: $mid-grey;
+$title-color: $mid-grey;
+$subtitle-color: $mid-grey;
+$card-background-color: $primary;
+$card-color: $text-light;
+$card-header-color: $text-light;
+$navbar-background-color: $primary;
+$navbar-item-color: $text-light;
+$navbar-item-hover-color: $text-light;
+$navbar-item-hover-background-color: $secondary;
+$footer-background-color: $primary;
+$footer-color: $text-light;
+
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth !important;
+    transition: all 0.25s ease;
+    background-color: $background;
+    color: $text-light;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.5vmax !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $secondary !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $dark-grey !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $accent !important;
+}
+
+::placeholder {
+    font-family: 'Poppins', sans-serif;
+    color: $mid-grey;
+}
+
+// Navigation
+#navbar {
+    background-color: $primary;
+    
+    .navbar-burger {
+        color: $text-light;
+        span:nth-child(2) {
+            left: calc(50%);
+            width: 8px;
+        }
+    }
+    
+    .navbar-item {
+        color: $text-light;
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+    
+    .navbar-menu {
+        background-color: $primary;
+    }
+
+    .navbar-logo {
+        img {
+            height: 28px; // Standard navbar height
+            max-height: none !important; // Override Bulma's default
+            width: auto;
+            transition: opacity 0.3s ease;
+            
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        
+        &:hover {
+            background-color: transparent !important;
+        }
+    }
+}
+
+.is-active {
+    font-weight: bold;
+    color: $text-light !important;
+    background-color: $secondary !important;
+}
+
+.columns {
+    .button {
+        margin: 0.5rem !important;
+    }
+}
+
+hr {
+    margin: 1rem auto;
+    height: 1px;
+}
+
+.column {
+    margin: auto 0.5rem;
+    padding: 0.5rem;
+}
+
+.searchResult {
+    a {
+        .title {
+            text-decoration: underline;
+        }
+    }
+}
+
+.card {
+    background-color: $secondary;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    
+    &:hover {
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+    }
+    
+    .card-content {
+        background-color: $secondary;
+        .title {
+            color: $text-light;
+        }
+        
+        .subtitle {
+            color: $light-grey;
+        }
+    }
+}
+
+.hero {
+    background-color: $background;
+    
+    &.is-primary {
+        background-color: $primary;
+        color: $text-light;
+        
+        .title, .subtitle {
+            color: $text-light;
+        }
+    }
+}
+
+.blog-card {
+    background-color: $secondary;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.platform-icons {
+    margin-top: 1rem;
+    
+    .icon {
+        margin: 0 0.5rem;
+        color: $text-light;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.footer {
+    background-color: $primary;
+    color: $text-light;
+    
+    a {
+        color: $light-grey;
+        
+        &:hover {
+            color: $text-light;
+        }
+    }
+}
+
+.content {
+    color: $text-light;
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: $mid-grey;
+    }
+    
+    p {
+        color: $light-grey;
+    }
+    
+    a {
+        color: $light-grey;
+        
+        &:hover {
+            color: $text-light;
+        }
+    }
+    
+    strong {
+        color: $mid-grey !important;
+    }
+}
+
+.button {
+    &.is-primary {
+        background-color: $primary;
+        color: $text-light;
+        
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+    
+    &.is-light {
+        background-color: $light-grey;
+        color: $text-dark;
+        
+        &:hover {
+            background-color: $mid-grey;
+            color: $text-light;
+        }
+    }
+}
+
+// Post Page Styles
+#post {
+    .subtitle {
+        &.is-6, &.is-uppercase {
+            color: $mid-grey !important;
+            
+            b, a, u {
+                color: $mid-grey !important;
+            }
+            
+            i.fas {
+                color: $mid-grey !important;
+            }
+            
+            .tag {
+                background-color: transparent !important;
+                color: $mid-grey !important;
+            }
+        }
+    }
+    
+    .has-text-link {
+        color: $mid-grey !important;
+    }
+}
+
+// Blog and Page Headings
+.post-title, .page-title, .post-link, h1, h2, h3, h4, h5, h6 {
+    color: $mid-grey !important;
+}
+
+.post-meta {
+    color: $mid-grey;
+    
+    i, .fa-solid, .fa-regular {
+        color: $mid-grey;
+    }
+    
+    span, time, .read-time {
+        color: $mid-grey;
+    }
+}
+
+.post-tags {
+    i {
+        color: $mid-grey;
+    }
+    
+    a {
+        color: $mid-grey;
+        
+        &:hover {
+            color: $light-grey;
+        }
+    }
+}
+
+.post-date, .post-author {
+    color: $mid-grey;
+}
+
+.post-content {
+    color: $light-grey;
+    
+    p, li {
+        color: $light-grey;
+    }
+}
+
+// Game Card
+.game-card {
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: $primary;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+    
+    .game-card-image {
+        margin-bottom: 1rem;
+        
+        img {
+            border-radius: 1rem;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+    
+    .game-card-content {
+        .game-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: $text-light;
+            margin-bottom: 0.5rem;
+        }
+        
+        .game-platforms {
+            margin-bottom: 0.5rem;
+            
+            .platform-icon {
+                margin: 0 0.25rem;
+                color: $text-light;
+                
+                i {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        
+        .game-description {
+            color: $text-light;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    }
+}
+
+// Footer Logo
+.footer-logo {
+    width: 96px;
+    height: 64px;
+    border-radius: 0 !important;
+    background: none !important;
+    display: block !important;
+    
+    img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        border-radius: 0 !important;
+        transition: opacity 0.3s ease;
+        
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+// Centered Logo
+.centered-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    img {
+        width: 33.33%; // One third of the container width
+        height: auto;
+        max-width: 400px; // Maximum size limit
+        margin-bottom: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        color: $mid-grey;
+        text-align: center;
+    }
+}
+
+// Text Styles
+strong, b {
+    color: $mid-grey !important;
+}
+
+// About Page Styles
+.box.has-background-black {
+    border-radius: 1rem;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+    
+    .title {
+        margin-bottom: 1.5rem;
+        color: $mid-grey;
+    }
+    
+    .content {
+        color: $light-grey;
+        
+        strong {
+            color: $mid-grey;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            
+            li {
+                margin-bottom: 1rem;
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+// Contact Page Social Links
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+    
+    .social-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $mid-grey;
+        transition: all 0.3s ease;
+        
+        i {
+            margin-bottom: 0.5rem;
+        }
+        
+        span {
+            font-size: 0.9rem;
+        }
+        
+        &:hover {
+            color: $light-grey;
+            transform: translateY(-3px);
+        }
+    }
+}
+
+.email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $mid-grey;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    
+    &:hover {
+        color: $light-grey;
+    }
+    
+    i {
+        font-size: 1.1em;
+    }
+}
+
+// Email Display
+.email-display {
+    color: $mid-grey;
+    font-size: 1.2rem;
+    
+    .fa-envelope {
+        margin-right: 0.5rem;
+    }
+    
+    i {
+        color: $mid-grey;
+        font-style: italic;
+        font-size: 1rem;
+        
+        &.fas {
+            font-style: normal;
+        }
+    }
+}

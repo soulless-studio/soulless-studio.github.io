@@ -1,0 +1,62 @@
+.platform-list {
+    display: flex;
+    justify-content: flex-start !important;
+    gap: 15px !important;
+    flex-wrap: wrap !important;
+    margin-bottom: 1.5rem;
+}
+
+.platform-icon, .bi-nintendo-switch {
+    color: #808080 !important;
+    font-size: 20px !important;
+    transition: color 0.3s ease !important;
+    cursor: pointer !important;
+}
+
+.platform-icon:hover, .bi-nintendo-switch:hover {
+    color: #ffffff !important;
+}
+
+.platform-link {
+    text-decoration: none !important;
+}
+
+.platform-link[href="#"] {
+    cursor: not-allowed !important;
+    opacity: 0.5 !important;
+}
+
+.bi-nintendo-switch {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.gallery-container {
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+.gallery-thumbnail {
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+}
+
+.gallery-item:hover .gallery-thumbnail {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.has-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-image {
+    border-radius: 8px;
+    object-fit: scale-down;
+    width: 100%;
+    height: 100%;
+}

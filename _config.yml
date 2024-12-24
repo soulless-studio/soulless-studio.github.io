@@ -1,13 +1,60 @@
 title: Soulless Studio
 email: say-hi@soulless.studio
 description: >-
-  Game development studio creating amazing experiences
-baseurl: ""
-url: 'https://soulless-studio.github.io'
+  An ambitious indie game studio crafting our debut title with passion and precision. We're a small team with big dreams, focusing on creating unique gaming experiences that challenge conventions and captivate players.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://soulless-studio.github.io" # the base hostname & protocol for GitHub project pages
+
+site-image: /assets/images/meta.png
+site-keywords: Indie Game Studio, Game Development, Indie Games, Gaming
+favicon-url: /assets/images/favicon.ico
+heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+
+facebook_username: 
+twitter_username: 
+instagram_username: soulless.studio
+linkedin_username: 
+github_username: soulless-studio
+youtube_channel_id: 
+reddit_username: soulless_studio
+behance_username: 
+dribbble_username: 
+spotify_username: 
+tiktok_username: soulless.studio
+
+google-analytics: 
+disqus-shortname: 
+
+author-name: Soulless Studio
+author-image: /assets/images/logo-white.png
+author-about: We pour everything in, proving that ‘soulless’ is anything but.
+author-url: https://soulless.studio
+
+permalink: "news/:categories/:year/:month/:day/:title/"
+
 theme: minima
 
 header_pages:
   - index.md
   - games.md
+  - blog.md
   - about.md
   - contact.md
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Custom settings
+show_excerpts: true
+
+# Sass settings
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Add custom CSS
+extra_css:
+  - /assets/css/custom.css

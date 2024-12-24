@@ -1,0 +1,84 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  {% include head.html %}
+  <style>
+    .columns.is-multiline {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+    .columns.is-multiline > .column.is-12 {
+      grid-column: 1 / -1;
+    }
+    .columns.is-multiline > .column {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .page-title {
+      padding-top: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+  {% include navbar.html %}
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <!-- Introduction -->
+          <div class="content has-text-centered mb-6">
+            <h1 class="title page-title is-1 is-uppercase has-text-weight-bold">{{ page.title }}</h1>
+            <hr class="has-background-black">
+            </div>
+          </nav>
+
+          <!-- Main Content Grid -->
+          <div class="columns is-multiline">
+            {% assign sections = content | split: "<!-- section:" %}
+            {% for section in sections %}
+              {% if section contains "-->" %}
+                {% assign section_parts = section | split: "-->" %}
+                {% assign section_id = section_parts.first | strip %}
+                {% assign section_content = section_parts.last %}
+                
+                {% if section_id == "intro" %}
+                  <div class="column is-12">
+                    {% include content-section.html 
+                      title=""
+                      content=section_content %}
+                  </div>
+                {% else %}
+                  {% assign content_parts = section_content | split: "##" %}
+                  {% assign section_title = content_parts.last | split: "
+" | first | strip %}
+                  {% assign section_content = content_parts.last %}
+                  
+                  {% if section_id == "team" or section_id == "mission" or section_id == "vision" or section_id == "values" %}
+                  <div class="column is-6">
+                  {% else %}
+                  <div class="column is-12">
+                  {% endif %}
+                    {% include content-section.html 
+                      title=section_title
+                      content=section_content %}
+                  </div>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include footer.html %}
+</body>
+</html>
