@@ -5,7 +5,7 @@ description: >-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://soulless-studio.github.io" # the base hostname & protocol for GitHub project pages
 
-site-image: /assets/images/meta.jpg
+site-image: /assets/images/meta.png
 site-keywords: Indie Game Studio, Game Development, Indie Games, Gaming
 favicon-url: /assets/images/favicon.ico
 heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940

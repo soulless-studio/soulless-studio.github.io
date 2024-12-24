@@ -1,0 +1,62 @@
+<style>
+.content-section {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border: 2px solid #808080;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content-section .title {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.content-section .content {
+    color: #cccccc;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.content-section .content strong {
+    color: #ffffff;
+}
+</style>
+
+<div class="content-section" style="
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border: 2px solid #808080;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+">
+    <h2 class="title is-4 has-text-centered" style="color: #ffffff; margin-bottom: 1.5rem;">{{ include.title }}</h2>
+    <div class="content" style="color: #cccccc; font-size: 1.1rem; line-height: 1.8;">
+        {{ include.content | markdownify }}
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
+        section.addEventListener('mouseenter', () => {
+            section.style.transform = 'translateY(-5px)';
+            section.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
+        });
+        section.addEventListener('mouseleave', () => {
+            section.style.transform = 'translateY(0)';
+            section.style.boxShadow = 'none';
+        });
+    });
+});
+</script>
