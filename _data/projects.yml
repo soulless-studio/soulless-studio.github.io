@@ -1,6 +1,6 @@
 - name: Soulless
-  image: /assets/images/game-placeholder.png
-  link: /projects/soulless
+  image: /assets/images/project/soulless/soulless.png
+  link: /project/soulless
   description: Our debut title, currently in development. A game to die for.
   type: game
   platforms:

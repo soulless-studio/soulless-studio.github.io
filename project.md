@@ -1,7 +1,5 @@
 ---
-layout: page
+layout: projects
 title: Our Projects
 permalink: /projects/
 ---
-
-{% include project-card.html %}

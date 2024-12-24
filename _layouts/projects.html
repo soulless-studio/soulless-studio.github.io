@@ -1,0 +1,35 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include head.html %}
+</head>
+
+<body>
+    {% include navbar.html %}
+
+    <!--Main Section-->
+    <section class="hero is-fullheight" id="project">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="section">
+                    <h1 class="title is-1 is-uppercase has-text-weight-bold">
+                        {{page.title}}
+                    </h1>
+                    <hr class="has-background-black">
+                </div>
+                {% include project-card.html %}
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!--Footer-->
+    {% include footer.html %}
+</body>
+
+</html>

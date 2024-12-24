@@ -1,0 +1,32 @@
+.platform-list {
+    display: flex;
+    justify-content: flex-start !important;
+    gap: 15px !important;
+    flex-wrap: wrap !important;
+    margin-bottom: 1.5rem;
+}
+
+.platform-icon, .bi-nintendo-switch {
+    color: #808080 !important;
+    font-size: 20px !important;
+    transition: color 0.3s ease !important;
+    cursor: pointer !important;
+}
+
+.platform-icon:hover, .bi-nintendo-switch:hover {
+    color: #ffffff !important;
+}
+
+.platform-link {
+    text-decoration: none !important;
+}
+
+.platform-link[href="#"] {
+    cursor: not-allowed !important;
+    opacity: 0.5 !important;
+}
+
+.bi-nintendo-switch {
+    width: 20px !important;
+    height: 20px !important;
+}
