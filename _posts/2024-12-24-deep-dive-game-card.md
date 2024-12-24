@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-When focusing on keyboard interactions, you can extend this mechanism to support Enter or Space key presses. ]This implementation:
+When focusing on keyboard interactions, you can extend this mechanism to support Enter or Space key presses. This implementation:
 1. Waits for the DOM to be fully loaded using `DOMContentLoaded`
 2. Finds all game circle wrappers using `.querySelectorAll()`
 3. Attaches a click event listener to each wrapper
