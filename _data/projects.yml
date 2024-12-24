@@ -1,7 +1,7 @@
-- name: Our First Title
+- name: Soulless
   image: /assets/images/game-placeholder.png
-  link: /games#first-title
-  description: Our debut title, currently in development. A unique gaming experience that will challenge conventions and push creative boundaries. Follow our journey as we craft this exciting new game.
+  link: /projects/soulless
+  description: Our debut title, currently in development. A game to die for.
   type: game
   platforms:
     - name: windows
@@ -14,56 +14,8 @@
       url: https://store.playstation.com/placeholder
     - name: xbox
       url: https://www.xbox.com/games/placeholder
-    - name: steam
-      url: https://store.steampowered.com/app/placeholder
-    - name: itchio
-      url: https://itch.io/placeholder
-
-- name: Second Project
-  link: /games#second-project
-  image: /assets/images/game-placeholder.png
-  description: Our second project, currently in development. A unique gaming experience that will challenge conventions and push creative boundaries. Follow our journey as we craft this exciting new game.
-  type: app
-  platforms:
-    - name: android
-      url: https://play.google.com/store/apps/placeholder
-    - name: ios
-      url: https://apps.apple.com/app/placeholder
-
-- name: Third Project
-  link: /games#third-project
-  image: /assets/images/game-placeholder.png
-  description: Our third project, currently in development. A unique gaming experience that will challenge conventions and push creative boundaries. Follow our journey as we craft this exciting new game.
-  type: game
-  platforms:
-    - name: web
-      url: https://placeholder-game.com
     - name: switch
-      url: https://www.nintendo.com/store/games/placeholder
-
-- name: Fourth Project
-  link: /games#fourth-project
-  image: /assets/images/game-placeholder.png
-  description: Our fourth project, currently in development. A unique gaming experience that will challenge conventions and push creative boundaries. Follow our journey as we craft this exciting new game.
-  type: game
-  platforms:
-    - name: android
-      url: https://play.google.com/store/apps/placeholder
-    - name: ios
-      url: https://apps.apple.com/app/placeholder
-
-- name: Fifth Project
-  link: /games#fifth-project
-  image: /assets/images/game-placeholder.png
-  description: Our fifth project, currently in development. A unique gaming experience that will challenge conventions and push creative boundaries. Follow our journey as we craft this exciting new game.
-  type: game
-  platforms:
-    - name: windows
-      url: https://microsoft.com/store/apps/placeholder
-    - name: macos
-      url: https://apple.com/store/apps/placeholder
-    - name: linux
-      url: https://ubuntu.com/store/apps/placeholder
+      url: https://www.nintendo.com/games/placeholder
     - name: steam
       url: https://store.steampowered.com/app/placeholder
     - name: itchio
