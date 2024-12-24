@@ -1,0 +1,37 @@
+<style>
+.coming-soon {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border: 2px solid #808080;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.coming-soon-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: #808080;
+}
+
+.coming-soon-text {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.coming-soon-subtext {
+    color: #808080;
+    font-size: 1rem;
+}
+</style>
+
+<div class="coming-soon">
+    <div class="coming-soon-icon">
+        <i class="fas fa-clock"></i>
+    </div>
+    <h2 class="coming-soon-text">Coming Soon</h2>
+    <p class="coming-soon-subtext">{{ include.message | default: "Watch this space!" }}</p>
+</div>

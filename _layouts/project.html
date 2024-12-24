@@ -22,8 +22,8 @@ layout: compress
         <hr class="has-background-black">
         <div class="columns is-variable is-5">
           <div class="column is-6">
-            <figure class="image is-16by9 has-shadow">
-              <img src="{{page.image}}" alt="{{post.title}}" id="post-image">
+            <figure class="image is-16by9">
+              <img src="{{page.image}}" alt="{{page.title}}" id="post-image" class="has-shadow main-image">
             </figure>
           </div>
           <div class="subtitle column is-5 has-text-left-desktop has-text-left-fullhd has-text-left-tablet has-text-center-mobile">
@@ -90,6 +90,23 @@ layout: compress
             {% endif %}
           </div>
         </div>
+        
+        {% if page.gallery %}
+        <div class="gallery-container mb-6">
+          <div class="columns is-multiline is-mobile is-centered">
+            {% for image in page.gallery %}
+            <div class="column is-3-desktop is-4-tablet is-6-mobile">
+              <a href="{{site.url}}{{site.baseurl}}{{image}}" target="_blank" class="gallery-item">
+                <figure class="image is-16by9">
+                  <img src="{{site.url}}{{site.baseurl}}{{image}}" alt="Gallery image" class="gallery-thumbnail has-shadow">
+                </figure>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+        
         <div class="content has-text-justified-desktop has-text-justified-fullhd has-text-justified has-text-justified-tablet has-text-left-mobile">
           <p>{{ content }}</p>
         </div>

@@ -224,31 +224,26 @@
 }
 </style>
 
-<div class="columns is-centered is-multiline is-mobile">
-  {% for project in site.data.projects %}
-    {% if project.type == 'game' %}
-      <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile has-text-centered">
-        <div class="game-circle-wrapper">
-          <div class="game-circle">
-            <div class="game-circle-front">
-              {% if project.image %}
-              <style>
-                .game-circle-front::before {
-                  background-image: url('{{site.url}}{{site.baseurl}}{{project.image}}') !important;
-                }
-              </style>
-              {% endif %}
-              <h3 class="game-title">{{ project.name }}</h3>
+{% if game %}
+<div class="game-circle-wrapper">
+  <div class="game-circle">
+    <div class="game-circle-front">
+      {% if game.image %}
+      <style>
+        .game-circle-front::before {
+          background-image: url('{{site.url}}{{site.baseurl}}{{game.image}}') !important;
+        }
+      </style>
+      {% endif %}
+      <h3 class="game-title">{{ game.name }}</h3>
+    </div>
+    <div class="game-circle-back">
+              <a href="{{ game.link }}" class="learn-more-btn">Learn More</a>
             </div>
-            <div class="game-circle-back">
-              <a href="{{ project.link }}" class="learn-more-btn">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    {% endif %}
-  {% endfor %}
+    </div>
+  </div>
 </div>
+{% endif %}
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
