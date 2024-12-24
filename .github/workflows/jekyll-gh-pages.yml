@@ -26,18 +26,10 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Set CNAME
         run: |
-          if [ "${{ github.ref }}" = "refs/heads/production" ]; then
-            echo "${{ secrets.PRODUCTION_DOMAIN }}" > CNAME
-          else
-            echo "${{ secrets.DEVELOPMENT_DOMAIN }}" > CNAME
-          fi
+          echo "${{ secrets.PRODUCTION_DOMAIN }}" > CNAME
       - name: Set URL in config
         run: |
-          if [ "${{ github.ref }}" = "refs/heads/production" ]; then
-            sed -i "s|url:.*|url: https://${{ secrets.PRODUCTION_DOMAIN }}|g" _config.yml
-          else
-            sed -i "s|url:.*|url: https://${{ secrets.DEVELOPMENT_DOMAIN }}|g" _config.yml
-          fi
+          sed -i "s|baseurl:.*|baseurl: https://${{ secrets.PRODUCTION_DOMAIN }}|g" _config.yml
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         env:
