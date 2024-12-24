@@ -9,9 +9,9 @@ tags:
 url: /project/soulless-app
 platforms:
   - name: ios
-    url: https://apps.apple.com/us/app/soullessgame/id0000000000
+    url: # https://apps.apple.com/us/app/soulless-studio/id0000000000
   - name: android
-    url: https://play.google.com/store/apps/details?id=studio.soulless.soullessgame
+    url: # https://play.google.com/store/apps/details?id=studio.soulless.soullessgame
 ---
 
 The Soulless Companion App enhances your gameplay experience with our debut title. Currently in development, this app will be your essential tool in the afterlife.
