@@ -20,7 +20,8 @@
 }
 
 .game-circle.is-flipped .game-title {
-    display: none !important;
+    opacity: 0 !important;
+    transition-delay: 0s !important;
 }
 
 .game-circle-front,
@@ -111,6 +112,9 @@
     background: rgba(0, 0, 0, 0.5) !important;
     border-radius: 4px !important;
     backdrop-filter: blur(2px) !important;
+    opacity: 1 !important;
+    transition: opacity 0.2s !important;
+    transition-delay: 0.4s !important;
 }
 
 .learn-more-btn {
