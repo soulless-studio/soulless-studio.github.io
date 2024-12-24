@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: outreach
-post-image: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+post-image: https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2&h=650&w=940
 title: Welcome to Soulless Studio
 description: This post is an introduction to the mission and vision of the team at Soulless Studio.
 date: 2024-12-23 00:05:39 +0000
