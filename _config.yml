@@ -28,7 +28,7 @@ disqus-shortname:
 author-name: Soulless Studio
 author-image: /assets/images/logo-white.png
 author-about: We pour everything in, proving that ‘soulless’ is anything but.
-author-url: https://soulless.studio
+author-url: https://soulless-studio.github.io
 
 permalink: "news/:categories/:year/:month/:day/:title/"
 
